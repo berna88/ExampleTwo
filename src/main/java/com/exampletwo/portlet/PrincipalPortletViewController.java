@@ -1,5 +1,7 @@
 package com.exampletwo.portlet;
 
+import java.util.Map;
+
 import javax.portlet.RenderRequest;
 import javax.portlet.RenderResponse;
 
@@ -21,7 +23,40 @@ public class PrincipalPortletViewController {
 	}
 	
 	@RenderMapping(params = "action=showForm")
-	public String Form(){
+	public String Form(Map<String, Object> map){
+		
 		return FORM;
 	}
+}
+
+class Persona{
+	private String name;
+	private int age;
+	public Persona(){}
+	
+	public Persona(String name, int age){
+		this.name = name;
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
+	
+	
+	
 }

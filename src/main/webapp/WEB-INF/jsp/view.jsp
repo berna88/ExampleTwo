@@ -8,4 +8,4 @@
 	<portlet:param name="action" value="showForm"/>
 </portlet:renderURL>
 
-<a href="<%= clickView.toString%>" >Form</a>
+<a href="<%=clickView.toString()%>" >Form</a>
