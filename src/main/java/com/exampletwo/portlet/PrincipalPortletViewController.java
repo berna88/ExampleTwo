@@ -13,9 +13,15 @@ import org.springframework.web.portlet.bind.annotation.RenderMapping;
 @Controller
 @RequestMapping("VIEW")
 public class PrincipalPortletViewController {
+	public static final String FORM = "form";
 
 	@RenderMapping
 	public String view(RenderRequest request, RenderResponse response) {
 		return "view";
+	}
+	
+	@RenderMapping(params = "action=showForm")
+	public String Form(){
+		return FORM;
 	}
 }
