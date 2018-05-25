@@ -15,12 +15,12 @@ import com.liferay.portal.kernel.log.LogFactoryUtil;
  *
  */
 @Controller("helloWorldController")
-@RequestMapping(value="VIEW2")
+@RequestMapping(value="VIEW")
 public class ExampleControllerOne {
  
     private Log log = LogFactoryUtil.getLog(ExampleControllerOne.class.getName());
  
-     @RenderMapping
+     @RenderMapping(params = "action=berni")
         public String viewHomePage(RenderRequest request, RenderResponse response){ 
            log.info("#############################Calling viewHomePage##################################");
           return "try";
