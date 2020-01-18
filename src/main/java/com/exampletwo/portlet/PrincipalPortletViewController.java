@@ -38,8 +38,7 @@ public class PrincipalPortletViewController {
 	
 	@RenderMapping(params = "action=success")
 	public String viewSuccess() {
-	    return "success";
-	 
+	    return "success"; 
 	}
 	@ActionMapping(value = "handleCustomer")
     public void getCustomerData(@ModelAttribute("persona") Persona persona, ActionRequest actionRequest, ActionResponse actionResponse, Model model) {

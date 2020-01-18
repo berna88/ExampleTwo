@@ -1,9 +1,25 @@
 package com.exampletwo.models;
 
+import javax.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
+
+@Component
 public class Persona {
+	
+	@Value("Bernardo")
 	private String name;
+	@Value("29")
 	private int age;
-	public Persona(){}
+	
+	@PostConstruct
+	public void init(){
+		
+	}
+	
+	public Persona(){
+		
+	}
 	
 	public Persona(String name, int age){
 		this.name = name;
